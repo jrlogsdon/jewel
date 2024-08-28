@@ -59,7 +59,7 @@ import org.commonmark.node.ListBlock as CMListBlock
  */
 @ExperimentalJewelApi
 public class MarkdownProcessor(
-    private val extensions: List<MarkdownProcessorExtension> = emptyList(),
+    public val extensions: List<MarkdownProcessorExtension> = emptyList(),
     private val editorMode: Boolean = false,
     private val commonMarkParser: Parser = MarkdownParserFactory.create(editorMode, extensions),
 ) {

@@ -17,8 +17,8 @@ import org.commonmark.node.SoftLineBreak as CMSoftLineBreak
 import org.commonmark.node.StrongEmphasis as CMStrongEmphasis
 import org.commonmark.node.Text as CMText
 
-@VisibleForTesting
-internal fun Node.readInlineContent(
+// public for use from extensions that need to process InlineContent
+public fun Node.readInlineContent(
     markdownProcessor: MarkdownProcessor,
     extensions: List<MarkdownProcessorExtension>,
 ): List<InlineMarkdown> =
